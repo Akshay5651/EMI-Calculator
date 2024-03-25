@@ -1,0 +1,360 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100vh;
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom left, #e4dfec, white, white);
+}
+
+.sub-container {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .sub-container {
+    flex-direction: row;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header button {
+  display: none;
+  font-size: 1.5rem;
+}
+
+.header button:hover {
+  cursor: pointer;
+}
+
+.view,
+.breakup {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .view,
+  .breakup {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .details input {
+    margin-bottom: 0;
+  }
+}
+
+.loan-details {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .loan-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Add this line to align items to the center horizontally */
+    text-align: center;
+  }
+}
+
+/* Add this media query to make chart details bold for smaller screens */
+@media (max-width: 767px) {
+  .loan-details .chart-details p {
+    font-weight: bold;
+  }
+}
+
+.chart-details {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .chart-details {
+    margin-bottom: 0;
+  }
+}
+
+#lineChart,
+#pieChart {
+  width: 100%;
+  height: 200px;
+}
+
+#table-data {
+  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+#interest-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#interest-table td,
+#interest-table th {
+  border: 1px solid #e71d36;
+  text-align: center;
+  padding: 8px;
+}
+
+#interest-table tr:nth-child(even) {
+  background-color: #ff9f1c;
+}
+
+#interest-table th {
+  background-color: #2ec4b6;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  #interest-table th:nth-child(4),
+  #interest-table td:nth-child(4),
+  #interest-table th:nth-child(5),
+  #interest-table td:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #interest-table th,
+  #interest-table td {
+    min-width: 10vw;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  #interest-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #interest-table {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  #interest-table th,
+  #interest-table td {
+    min-width: 100px;
+    padding: 8px;
+  }
+}
+
+#interest-table td,
+#interest-table th {
+  min-width: 30px;
+}
+
+#interest-table td,
+#interest-table th {
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style for the placeholder text color and font family of the input fields */
+input[type="text"]::placeholder {
+  color: #ccc;
+  font-family: "Roboto", sans-serif; /* Add this line to set the font family */
+}
+
+/* Styling for input fields of type text */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  width: 50%; /* Adjust the width as needed */
+}
+
+/* Style for the text color of the input fields */
+input[type="text"] {
+  color: #6258a8;
+}
+
+/* Style for the placeholder text color of the input fields */
+input[type="text"]::placeholder {
+  color: #ccc;
+}
+
+/* Style for the input fields when they are in focus */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #9088d2;
+  box-shadow: 0 0 5px #9088d2;
+}
+
+/*----- Styling the sliders ----*/
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #9088d2;
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 5px #b3b3b3, -1px -1px 3px grey;
+  border: 5px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #9088d2;
+  cursor: pointer;
+  margin-top: -6px;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #b3b3b3;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #9088d2;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+  border-radius: 10px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 2px 2px 5px #b3b3b3, -1px -1px 3px grey;
+  border: 5px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #9088d2;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #9088d2;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+  border-radius: 10px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #9088d2;
+  border-radius: 5px;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #9088d2;
+  border-radius: 5px;
+}
+
+input[type="range"]::-ms-thumb {
+  box-shadow: 2px 2px 5px #b3b3b3, -1px -1px 3px grey;
+  border: 5px solid #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #9088d2;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #9088d2;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #9088d2;
+}
+
+/*-------------------------------------*/
+#price {
+  color: #130f31;
+  font-size: 25px;
+}
+
+#price-container {
+  color: #9088d2;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#price-container::before {
+  content: "Monthly Payable:";
+  font-size: 12px;
+  display: block;
+}
+
+#lineChart {
+  margin-top: 20px;
+}
