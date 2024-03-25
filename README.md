@@ -27,17 +27,15 @@ To test the project locally, follow these steps:
 git clone [[https://github.com/Akshay5651/EMI-Calculator.git](https://github.com/Akshay5651/EMI-Calculator.git)].
 
 2. Open the index.html file in your web browser.
-
-3. Navigate through the genres, albums, and artists to select and play music.
-
-4. Enjoy listening to your favorite tunes!
+   
+3. Test out the Calculator as per your need. 
 
 
 ## Future Development
 I plan to continue working on this project in the future, implementing new features and enhancements. If you have any suggestions or ideas for improvement, please don't hesitate to share them. Contact me via mail given at the end.
 
 ## Contributing
-Contributions to the Music Player App are welcome! If you have any new features to add or improvements to make, feel free to fork the repository and submit a pull request. Together, we can make the music player even better!
+Contributions to the EMI Calculator are welcome! If you have any new features to add or improvements to make, feel free to fork the repository and submit a pull request. Together, we can make the EMI Calculator even better!
 
 ## Contact
 For any further inquiries or feedback, please contact [Akshay Verma](mailto:akki221099@gmail.com).
