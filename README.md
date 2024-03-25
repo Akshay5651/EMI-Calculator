@@ -14,16 +14,11 @@ This repository provides a user-friendly EMI calculator built using HTML and CSS
 - Developers interested in exploring front-end development with HTML and CSS.
 
   
-##Feel free to:
+## Feel free to:
 
 - Clone the repository and explore the code.
 - Contribute improvements or additional features (pull requests welcome!).
-
   
-## Technologies:
-
-- HTML
-- CSS
 
 ## Usage
 To test the project locally, follow these steps:
